@@ -1,0 +1,22 @@
+<view class="page">
+    <!-- <input class="title" value='{{title}}' placeholder='主题' bindinput='titleInput'></input> -->
+    <textarea class="text" value='{{text}}' placeholder='作品描述' bindinput='textInput'></textarea>
+    <view class="img-title color-main">添加图片
+
+    </view>
+    <view class="img-list">
+        <image wx:for="{{imgArr}}" wx:key="img" class="main-img" src='{{item}}'></image>
+        <view class="add-btn" bindtap='addImg'>
+            <image mode='aspectFill' src='../../assets/icons/add-img.png'></image>
+        </view>
+    </view>
+    <view class="location">
+        <view class="loc-name" bindtap="getLocation">
+            <image mode='aspectFill' src='../../assets/icons/location.png'></image>{{locationName}}
+        </view>
+        <switch bindchange="showLocation" />
+    </view>
+    <form bindsubmit="formSubmit" report-submit="true">
+        <button formType="submit" class="release color-bg-main">立即发布</button>
+    </form>
+</view>

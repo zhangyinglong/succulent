@@ -1,0 +1,54 @@
+<!--pages/center/center.wxml-->
+<view class='top-part'>
+    <view class="bg"></view>
+    <view class="center-info">
+        <view class="user-info">
+            <image class="avatar" src="{{userInfo.avatar}}"></image>
+            <view class="user-name">
+                <text class="name">{{userInfo.nickname}}</text>
+                <!-- <text class="date">{{userInfo.date}}</text> -->
+                <view class="level">
+                    <image class="level-icon" src='../../assets/icons/level.png'></image>{{userInfo.level}}</view>
+            </view>
+            <navigator class="points" url='../credits/credits?credits={{userInfo.integral}}&level={{userInfo.level}}'>
+                <!--<image class="coin" src='../../assets/icons/coin.png'></image>-->积分
+                <text>{{userInfo.integral}}</text>
+                <image class="next" src="../../assets/icons/next.png"></image>
+            </navigator>
+        </view>
+        <view class="article-info">
+            <view class="item">
+                <text class="num">{{articleInfo.release}}</text>
+                <text class="text">我的发布</text>
+            </view>
+            <view class="item">
+                <text class="num">{{articleInfo.comment}}</text>
+                <text class="text">我的评论</text>
+            </view>
+        </view>
+    </view>
+    <view class="tools-warp">
+        <text class="title">小工具</text>
+        <view class="tools">
+            <navigator class="tools-item post-card" url="../../centerTools/postcardIndex/postcardIndex">明信片制作
+                <text class="text">友谊像一抹彩虹</text>
+                <image class="icon" src="../../assets/icons/postcard-icon.png"></image>
+            </navigator>
+            <navigator class="tools-item news" url="../../centerTools/weather/weather">天气早知道
+                <text class="text">冷暖自知 </text>
+                <image class="icon" src="../../assets/icons/album.png"></image>
+            </navigator>
+        </view>
+    </view>
+
+    <view class="menu-list">
+        <view class="menu">
+            <view class="text">
+                <image src="../../assets/icons/send.png"></image>
+                <text>推送通知</text>
+            </view>
+            <switch class="switch" color="#5756c0" checked="{{userInfo.push == '1'}}" bindchange="pushSet" />
+        </view>
+    </view>
+
+</view>

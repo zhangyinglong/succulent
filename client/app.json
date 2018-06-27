@@ -1,0 +1,45 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/addImg/addImg",
+    "pages/center/center",
+    "pages/example/index",
+    "pages/addCgi/addCgi"
+  ],
+
+  "usingComponents": {
+    "aaa": "../../modules/loading/loading"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#5756c0",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "多肉植物"
+  },
+  "tabBar": {
+    "borderStyle": "black",
+    "color": "#666",
+    "backgroundColor": "#fff",
+    "selectedColor": "#a09fed",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "大厅",
+        "iconPath": "assets/icons/hot.png",
+        "selectedIconPath": "assets/icons/hot-active.png"
+      },
+      {
+        "pagePath": "pages/addImg/addImg",
+        "text": "发布",
+        "iconPath": "assets/icons/release.png",
+        "selectedIconPath": "assets/icons/release.png"
+      },
+      {
+        "pagePath": "pages/example/index",
+        "text": "我的",
+        "iconPath": "assets/icons/center.png",
+        "selectedIconPath": "assets/icons/center-active.png"
+      }
+    ]
+  }
+}

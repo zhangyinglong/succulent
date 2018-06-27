@@ -1,0 +1,63 @@
+<!-- 导入loading模块  -->
+<import src="../../modules/loading/loading.wxml" />
+<template wx:if="{{loading}}" is="loading" />
+
+<view class="page">
+    <view class="list" wx:for="{{hotList}}" wx:key="1">
+        <view class="author">
+            <image src='{{item.authorInfo.avatarUrl}}'></image>
+            <view class="name">{{item.authorInfo.nickname}}
+                <image class="level-icon" src='../../assets/icons/level.png'></image>
+                <text class="level-name">{{item.authorInfo.level}}</text>
+                <text class="time">{{item.content.date}}</text>
+            </view>
+        </view>
+        <view class="img-contianer">
+            <block wx:if="{{item.img.length == 1}}">
+                <image class="one-img" bindtap="viewImg" data-id='{{item.content.id}}' data-views="{{item.content.views}}" data-current="{{imgUrl}}" data-imgArr="{{item.img}}" wx:for="{{item.img}}" wx:key="img" wx:for-item="imgUrl" mode='widthFix' src='{{imgUrl}}'></image>
+            </block>
+            <block wx:else>
+                <image class="two-img" bindtap="viewImg" data-id='{{item.content.id}}' data-views="{{item.content.views}}" data-current="{{imgUrl}}" data-imgArr="{{item.img}}" wx:for="{{item.img}}" wx:key="img" wx:for-item="imgUrl" mode='aspectFill' src='{{imgUrl}}'></image>
+            </block>
+        </view>
+        <navigator url='../detail/detail?id={{item.content.id}}'>
+            <view class="content">
+                <!-- <text wx:if="{{item.content.title}}" class="title">{{item.content.title}}</text> -->
+                <text class="discription">{{item.content.description}}</text>
+                <view class="bottom-info">
+                    <view class="location" wx:if="{{item.content.location}}">
+                        <image src='../../assets/icons/location.png'></image>{{item.content.location}}</view>
+                    <view class="views">查看 {{item.content.views}} 次</view>
+                </view>
+            </view>
+        </navigator>
+        <view class="content-info">
+            <!-- <view class="item">
+                <image src='../../assets/icons/view.png'></image>
+                <text>{{item.content.views}}</text>
+            </view> -->
+
+            <view class="item share" bindtap='share'>
+                <image src='../../assets/icons/share.png'></image>
+                <text>{{item.content.shares}}</text>
+                <button class="share-btn" open-type="share" data-img="{{item.img[0]}}" data-id="{{item.content.id}}" data-share="{{item.content.shares}}"></button>
+            </view>
+            <navigator url='../detail/detail?id={{item.content.id}}' class="item">
+                <image src='../../assets/icons/comment.png'></image>
+                <text>{{item.comments.length}}</text>
+            </navigator>
+            <view class="item praise" bindtap="praise" data-state="{{item.isPraise}}" data-praises='{{item.content.praises}}' data-id='{{item.content.id}}'>
+                <image wx:if="{{!item.isPraise}}" src='../../assets/icons/like.png'></image>
+                <image wx:if="{{item.isPraise}}" src='../../assets/icons/like-on.png'></image>
+                <text class="{{!item.isPraise ? '' : 'active'}}">{{item.content.praises}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="end-text" wx:if="{{!end && !loading}}">正在加载
+        <image src='../../assets/icons/loading.gif'></image>
+    </view>
+    <view class="end-text" wx:if="{{end}}">
+        我可是有底线的
+    </view>
+</view>
+<image class="backtop-icon" bindtap='backTop' wx:if="{{backTopShow}}" src='../../assets/icons/back_top.png'></image>

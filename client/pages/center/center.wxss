@@ -1,0 +1,236 @@
+/* pages/center/center.wxss */
+
+page {
+    background: #f2f2f2;
+}
+
+.top-part {
+    position: relative;
+    padding-top: 20rpx;
+}
+
+.top-part .bg {
+    background: #5756c0;
+    height: 160rpx;
+    position: absolute;
+    top: -20rpx;
+    z-index: 1;
+    width: 100%;
+}
+
+.center-info {
+    margin-top: 20rpx;
+    width: 702rpx;
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    margin: 0 24rpx;
+    padding: 40rpx;
+    box-shadow: 0 6rpx 12rpx rgba(0, 0, 0, 0.1);
+}
+
+.user-info {
+    overflow: hidden;
+    padding-bottom: 30rpx;
+}
+
+.user-info image.avatar {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+    border: 4rpx solid #fff;
+    box-shadow: 0 8rpx 10rpx rgba(0, 0, 0, 0.2);
+    float: left;
+}
+
+.user-name {
+    padding-left: 30rpx;
+    float: left;
+}
+
+.user-name .name {
+    font-size: 32rpx;
+    color: #333;
+    display: block;
+    padding: 20rpx 0 10rpx;
+}
+
+.user-name .level {
+    display: block;
+    font-size: 26rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    color: #999;
+}
+
+.user-name .level .level-icon {
+    display: inline-block;
+    width: 40rpx;
+    height: 40rpx;
+    vertical-align: middle;
+    margin-right: 10rpx;
+}
+
+.points {
+    position: absolute;
+    background: #a09fed;
+    top: 30rpx;
+    right: 0;
+    line-height: 60rpx;
+    height: 60rpx;
+    border-radius: 30rpx 0 0 30rpx;
+    color: #fff;
+    font-size: 24rpx;
+    padding: 0 16rpx 0 30rpx;
+}
+
+.points .coin {
+    display: inline-block;
+    height: 40rpx;
+    width: 40rpx;
+    vertical-align: middle;
+}
+
+.points text {
+    font-size: 30rpx;
+    font-weight: bold;
+}
+
+.points .next {
+    margin-left: 4rpx;
+    margin-top: -6rpx;
+    display: inline-block;
+    width: 28rpx;
+    height: 28rpx;
+    vertical-align: middle;
+}
+
+.user-name .date {
+    display: block;
+    font-size: 24rpx;
+    color: #999;
+}
+
+.article-info {
+    border-top: 1px solid #efefef;
+    padding-top: 20rpx;
+    overflow: hidden;
+}
+
+.article-info .item {
+    width: 50%;
+    float: left;
+}
+
+.article-info .item text {
+    display: block;
+    text-align: center;
+}
+
+.article-info .item text.num {
+    font-weight: bold;
+    font-size: 32rpx;
+    color: #333;
+    line-height: 60rpx;
+}
+
+.article-info .item text.text {
+    font-size: 28rpx;
+    color: #333;
+}
+
+.tools-warp {
+    width: 702rpx;
+    background: #fff;
+    margin: 30rpx 24rpx 0;
+    box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1);
+}
+
+.tools-warp .title {
+    font-size: 30rpx;
+    color: #666;
+    border-bottom: 1px solid #efefef;
+    display: block;
+    line-height: 80rpx;
+    padding: 0 40rpx;
+}
+
+.tools {
+    overflow: hidden;
+    padding: 20rpx 0;
+}
+
+.tools .tools-item {
+    width: 46%;
+    float: left;
+    margin: 0 2%;
+    padding: 20rpx 40rpx;
+    position: relative;
+    font-size: 32rpx;
+    color: #333;
+}
+
+.post-card {
+    border-right: 1px solid #efefef;
+}
+
+.tools-item .text {
+    font-size: 24rpx;
+    color: #999;
+    padding-top: 10rpx;
+    display: block;
+}
+
+.post-card .icon {
+    position: absolute;
+    top: 0rpx;
+    right: 10rpx;
+    width: 100rpx;
+    height: 100rpx;
+    transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+}
+
+.news .icon {
+    position: absolute;
+    top: 0rpx;
+    right: 20rpx;
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.menu-list {
+    padding-top: 20rpx;
+}
+
+.menu {
+    overflow: hidden;
+    width: 702rpx;
+    background: #fff;
+    margin: 0 24rpx;
+    box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1);
+    height: 100rpx;
+    line-height: 100rpx;
+}
+
+.menu .text {
+    display: block;
+    float: left;
+}
+
+.menu .text image {
+    padding: 30rpx;
+    width: 40rpx;
+    height: 40rpx;
+    float: left;
+}
+
+.menu .text text {
+    float: left;
+    font-size: 28rpx;
+    color: #666;
+}
+
+.menu .switch {
+    float: right;
+}
